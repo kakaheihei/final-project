@@ -15,7 +15,14 @@ document.getElementById("principal").focus();}
     var yearNow = new Date().getFullYear();
     var yearsFromNow = (+yearNow) + (+y);
 //display result from calculation
-   document.getElementById("result").innerHTML = "<br>" + "If you deposit " + p + "," + "<br>" + "at an interest rate " + r + "%." + "<br>" + "You will receive an amount of " + interest + "," + "<br>" + "in the year " + yearsFromNow;
+var result = document.getElementById("result");
+    result.innerHTML = 
+        '<div>' +
+            'If you deposit <span class="number" id="principalResult\">' + p + '</span>,<br/>' +
+            'at an interest rate of <span class="number" id="rateResult">' + r + '%</span>.<br/>' +
+            'You will receive an amount of <span class="number" id="interestResult">' + interest + '</span>,<br/>' +
+            'in the year <span class="number" id="futureYearResult">' + yearsFromNow + '</span>.<br/>' +
+        '</div>'
 }  
 }
 
